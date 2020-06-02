@@ -1,0 +1,99 @@
+﻿@model IEnumerable<IVR_C19SchedulesMVCWebApplication4.Models.Session>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Passcode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Caller)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreationTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreationTimeDisplayDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LoginTimeDisplayDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LogoutTimeDisplayDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PasscodeSentDisplayDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LoginTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LogoutTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PasscodeSent)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UnregisteredNumberCallback)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PasscodeSentSpokenDateTime)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Passcode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Caller)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreationTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreationTimeDisplayDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LoginTimeDisplayDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LogoutTimeDisplayDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PasscodeSentDisplayDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LoginTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LogoutTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PasscodeSent)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UnregisteredNumberCallback)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PasscodeSentSpokenDateTime)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.SessionId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.SessionId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.SessionId })
+        </td>
+    </tr>
+}
+
+</table>

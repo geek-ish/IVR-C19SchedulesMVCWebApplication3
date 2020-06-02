@@ -1,0 +1,120 @@
+﻿@model IVR_C19SchedulesMVCWebApplication4.Models.Session
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Session</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Passcode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Passcode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Caller)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Caller)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreationTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreationTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreationTimeDisplayDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreationTimeDisplayDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LoginTimeDisplayDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LoginTimeDisplayDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LogoutTimeDisplayDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LogoutTimeDisplayDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PasscodeSentDisplayDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PasscodeSentDisplayDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LoginTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LoginTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LogoutTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LogoutTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PasscodeSent)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PasscodeSent)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UnregisteredNumberCallback)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UnregisteredNumberCallback)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PasscodeSentSpokenDateTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PasscodeSentSpokenDateTime)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
